@@ -1,0 +1,61 @@
+@use "gradientVariables";
+.details {
+    padding: 40px 0;
+    
+    &--churrasco{
+        background-image: linear-gradient(gradientVariables.$gradientcolor1, gradientVariables.$gradientcolor3);
+    }
+
+    &--bebidas{
+        background-image: linear-gradient(gradientVariables.$gradientcolor3, gradientVariables.$gradientcolor4);
+    }
+
+    &--diversao{
+        background-image: linear-gradient(gradientVariables.$gradientcolor4, gradientVariables.$gradientcolor2);
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    &--img-left {
+        .container{
+            flex-direction: row-reverse;
+        }
+    }
+
+    &__text{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    &--text-left{
+        margin-left: 22px;
+    }
+
+    &__title {
+        font-size: 30px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        &__text{
+            font-size: 28px;
+        }
+    
+        &__title {
+            font-size: 30px;
+        }
+      }
+
+    @media only screen and (max-width: 767px) {
+        .container {
+            display: block;
+        }
+
+        &__text{
+            font-size: 20px;
+        }
+    }
+}
